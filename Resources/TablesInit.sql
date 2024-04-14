@@ -1,5 +1,5 @@
 CREATE TABLE [PlayerCharacter] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [ClassId] integer,
   [RaceId] integer,
   [RaceTraitId] integer,
@@ -21,13 +21,13 @@ CREATE TABLE [PlayerCharacter] (
 GO
 
 CREATE TABLE [DiceType] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Sides] integer
 )
 GO
 
 CREATE TABLE [PlayerStat] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [PlayerId] integer,
   [DiceTypeId] integer,
   [BaseStatId] integer,
@@ -42,7 +42,7 @@ CREATE TABLE [PlayerStat] (
 GO
 
 CREATE TABLE [NonPlayerCharacter] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [ChapterId] integer,
   [Name] nvarchar(50),
   [ImageId] integer,
@@ -52,7 +52,7 @@ CREATE TABLE [NonPlayerCharacter] (
 GO
 
 CREATE TABLE [Monster] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [RaceId] integer,
   [AlignmentId] integer,
   [BaseStatId] integer,
@@ -70,34 +70,34 @@ CREATE TABLE [Monster] (
 GO
 
 CREATE TABLE [MonsterResistance] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [MonsterId] integer,
   [ResistanceId] integer
 )
 GO
 
 CREATE TABLE [MonsterImmunity] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [MonsterId] integer,
   [ImmunityId] integer
 )
 GO
 
 CREATE TABLE [MonsterLanguage] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [MonsterId] integer,
   [LanguageId] integer
 )
 GO
 
 CREATE TABLE [PlayerCharacterSpell] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [SpellId] integer
 )
 GO
 
 CREATE TABLE [Spell] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Level] integer,
   [Name] nvarchar(100),
   [Description] nvarchar(max)
@@ -105,21 +105,21 @@ CREATE TABLE [Spell] (
 GO
 
 CREATE TABLE [Image] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [Image] varbinary(max)
 )
 GO
 
 CREATE TABLE [Class] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [ImageId] integer
 )
 GO
 
 CREATE TABLE [ClassSkill] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [PlayerId] integer,
   [Name] nvarchar(50),
   [Description] nvarchar(max)
@@ -127,60 +127,60 @@ CREATE TABLE [ClassSkill] (
 GO
 
 CREATE TABLE [Race] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50)
 )
 GO
 
 CREATE TABLE [RaceTrait] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [Description] nvarchar(max)
 )
 GO
 
 CREATE TABLE [PlayerCharacterFeat] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [FeatId] integer
 )
 GO
 
 CREATE TABLE [Feat] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [Description] nvarchar(max)
 )
 GO
 
 CREATE TABLE [PlayerCharacterLanguage] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [PlayerId] integer,
   [LanguageId] integer
 )
 GO
 
 CREATE TABLE [Language] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50)
 )
 GO
 
 CREATE TABLE [Background] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [Description] nvarchar(max)
 )
 GO
 
 CREATE TABLE [Alignment] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Morality] nvarchar(50),
   [Attitude] nvarchar(50)
 )
 GO
 
 CREATE TABLE [BaseStat] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Strength] integer,
   [Dexterity] integer,
   [Constitution] integer,
@@ -192,7 +192,7 @@ CREATE TABLE [BaseStat] (
 GO
 
 CREATE TABLE [SavingStat] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Strength] integer,
   [Dexterity] integer,
   [Constitution] integer,
@@ -203,7 +203,7 @@ CREATE TABLE [SavingStat] (
 GO
 
 CREATE TABLE [SkillStat] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Acrobatics] integer,
   [AnimalHandling] integer,
   [Arcana] integer,
@@ -226,47 +226,47 @@ CREATE TABLE [SkillStat] (
 GO
 
 CREATE TABLE [PlayerCharacterResistance] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [PlayerId] integer,
   [ResistanceId] integer
 )
 GO
 
 CREATE TABLE [Resistance] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50)
 )
 GO
 
 CREATE TABLE [PlayerCharacterImmunity] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [PlayerId] integer,
   [ImmunityId] integer
 )
 GO
 
 CREATE TABLE [Immunity] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50)
 )
 GO
 
 CREATE TABLE [MonsterPassiveSkill] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [Description] nvarchar(max)
 )
 GO
 
 CREATE TABLE [MonsterAction] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [Description] nvarchar(max)
 )
 GO
 
 CREATE TABLE [Roleplay] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [PersonalityTrait] nvarchar(255),
   [Ideal] nvarchar(255),
   [Bond] nvarchar(255),
@@ -275,13 +275,13 @@ CREATE TABLE [Roleplay] (
 GO
 
 CREATE TABLE [PlayerCharacterEquipment] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [EquipmentId] integer
 )
 GO
 
 CREATE TABLE [Equipment] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [TypeId] integer,
   [Name] nvarchar(50),
   [Description] nvarchar(max),
@@ -290,13 +290,13 @@ CREATE TABLE [Equipment] (
 GO
 
 CREATE TABLE [EquipmentType] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50)
 )
 GO
 
 CREATE TABLE [CharacterDescription] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Age] integer,
   [Height] decimal,
   [Weight] integer,
@@ -307,13 +307,13 @@ CREATE TABLE [CharacterDescription] (
 GO
 
 CREATE TABLE [Chapter] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(255)
 )
 GO
 
 CREATE TABLE [GameMasterNote] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [ChapterId] integer,
   [Title] nvarchar(255),
   [Content] nvarchar(max),
@@ -322,7 +322,7 @@ CREATE TABLE [GameMasterNote] (
 GO
 
 CREATE TABLE [Map] (
-  [Id] integer PRIMARY KEY,
+  [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [ChapterId] integer,
   [Title] nvarchar(255),
   [Description] nvarchar(max),
