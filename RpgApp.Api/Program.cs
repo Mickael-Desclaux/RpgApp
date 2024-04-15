@@ -17,9 +17,11 @@ builder.Services.AddSwaggerGen();
 
 //Add Repositories
 builder.Services.AddScoped<IRepository<Spell>, Repository<Spell>>();
+builder.Services.AddScoped<IRepository<PlayerCharacter>, Repository<PlayerCharacter>>();
 
 //Add Services
 builder.Services.AddTransient<ISpellService, SpellService>();
+builder.Services.AddTransient<IPlayerCharacterService, PlayerCharacterService>();
 
 var app = builder.Build();
 
