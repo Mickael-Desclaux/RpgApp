@@ -22,6 +22,7 @@ builder.Services.AddScoped<IRepository<DiceType>, Repository<DiceType>>();
 builder.Services.AddScoped<IRepository<PlayerStat>, Repository<PlayerStat>>();
 builder.Services.AddScoped<IRepository<NonPlayerCharacter>, Repository<NonPlayerCharacter>>();
 builder.Services.AddScoped<IRepository<Monster>, Repository<Monster>>();
+builder.Services.AddScoped<IRepository<Image>, Repository<Image>>();
 
 //Add Services
 builder.Services.AddTransient<ISpellService, SpellService>();
@@ -30,6 +31,7 @@ builder.Services.AddTransient<IDiceTypeService, DiceTypeService>();
 builder.Services.AddTransient<IPlayerStatService, PlayerStatService>();
 builder.Services.AddTransient<INonPlayerCharacterService, NonPlayerCharacterService>();
 builder.Services.AddTransient<IMonsterService, MonsterService>();
+builder.Services.AddTransient<IImageService, ImageService>();
 
 var app = builder.Build();
 

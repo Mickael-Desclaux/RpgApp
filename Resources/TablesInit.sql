@@ -106,8 +106,7 @@ GO
 
 CREATE TABLE [Image] (
   [Id] integer IDENTITY(1,1) PRIMARY KEY,
-  [Name] nvarchar(50),
-  [Image] varbinary(max)
+  [ImageData] varbinary(max)
 )
 GO
 
