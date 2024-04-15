@@ -19,11 +19,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRepository<Spell>, Repository<Spell>>();
 builder.Services.AddScoped<IRepository<PlayerCharacter>, Repository<PlayerCharacter>>();
 builder.Services.AddScoped<IRepository<DiceType>, Repository<DiceType>>();
+builder.Services.AddScoped<IRepository<PlayerStat>, Repository<PlayerStat>>();
 
 //Add Services
 builder.Services.AddTransient<ISpellService, SpellService>();
 builder.Services.AddTransient<IPlayerCharacterService, PlayerCharacterService>();
 builder.Services.AddTransient<IDiceTypeService, DiceTypeService>();
+builder.Services.AddTransient<PlayerStatService, PlayerStatService>();
 
 var app = builder.Build();
 
