@@ -9,5 +9,6 @@ namespace RpgApp.Api.Data
         public DbSet<PlayerCharacter> PlayerCharacter { get; init; }
         public DbSet<DiceType> DiceType { get; init; }
         public DbSet<PlayerStat> PlayerStat { get; init; }
+        public DbSet<NonPlayerCharacter> NonPlayerCharacter { get; init; }
     }
 }

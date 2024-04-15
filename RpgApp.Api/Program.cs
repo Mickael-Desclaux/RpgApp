@@ -20,12 +20,14 @@ builder.Services.AddScoped<IRepository<Spell>, Repository<Spell>>();
 builder.Services.AddScoped<IRepository<PlayerCharacter>, Repository<PlayerCharacter>>();
 builder.Services.AddScoped<IRepository<DiceType>, Repository<DiceType>>();
 builder.Services.AddScoped<IRepository<PlayerStat>, Repository<PlayerStat>>();
+builder.Services.AddScoped<IRepository<NonPlayerCharacter>, Repository<NonPlayerCharacter>>();
 
 //Add Services
 builder.Services.AddTransient<ISpellService, SpellService>();
 builder.Services.AddTransient<IPlayerCharacterService, PlayerCharacterService>();
 builder.Services.AddTransient<IDiceTypeService, DiceTypeService>();
 builder.Services.AddTransient<IPlayerStatService, PlayerStatService>();
+builder.Services.AddTransient<INonPlayerCharacterService, NonPlayerCharacterService>();
 
 var app = builder.Build();
 
