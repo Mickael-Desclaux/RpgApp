@@ -7,6 +7,6 @@ namespace RpgApp.Api.Data
     {
         public DbSet<Spell> Spell { get; init; }
         public DbSet<PlayerCharacter> PlayerCharacter { get; init; }
-
+        public DbSet<DiceType> DiceType { get; init; }
     }
 }
