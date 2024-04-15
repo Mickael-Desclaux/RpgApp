@@ -25,7 +25,7 @@ builder.Services.AddScoped<IRepository<PlayerStat>, Repository<PlayerStat>>();
 builder.Services.AddTransient<ISpellService, SpellService>();
 builder.Services.AddTransient<IPlayerCharacterService, PlayerCharacterService>();
 builder.Services.AddTransient<IDiceTypeService, DiceTypeService>();
-builder.Services.AddTransient<PlayerStatService, PlayerStatService>();
+builder.Services.AddTransient<IPlayerStatService, PlayerStatService>();
 
 var app = builder.Build();
 
