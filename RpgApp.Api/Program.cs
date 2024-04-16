@@ -27,6 +27,7 @@ builder.Services.AddScoped<IRepository<Image>, Repository<Image>>();
 builder.Services.AddScoped<IRepository<CharacterClass>, Repository<CharacterClass>>();
 builder.Services.AddScoped<IRepository<ClassSkill>, Repository<ClassSkill>>();
 builder.Services.AddScoped<IRepository<Race>, Repository<Race>>();
+builder.Services.AddScoped<IRepository<RaceTrait>, Repository<RaceTrait>>();
 
 #endregion
 
@@ -42,6 +43,7 @@ builder.Services.AddTransient<IImageService, ImageService>();
 builder.Services.AddTransient<ICharacterClassService, CharacterClassService>();
 builder.Services.AddTransient<IClassSkillService, ClassSkillService>();
 builder.Services.AddTransient<IRaceService, RaceService>();
+builder.Services.AddTransient<IRaceTraitService, RaceTraitService>();
 
 #endregion
 
