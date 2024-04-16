@@ -14,5 +14,6 @@ namespace RpgApp.Api.Data
         public DbSet<Image> Image { get; init; }
         public DbSet<CharacterClass> CharacterClass { get; init; }
         public DbSet<ClassSkill> ClassSkill { get; init; }
+        public DbSet<Race> Race { get; init; }
     }
 }
