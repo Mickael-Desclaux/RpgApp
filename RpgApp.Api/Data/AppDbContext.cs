@@ -12,5 +12,6 @@ namespace RpgApp.Api.Data
         public DbSet<NonPlayerCharacter> NonPlayerCharacter { get; init; }
         public DbSet<Monster> Monster { get; init; }
         public DbSet<Image> Image { get; init; }
+        public DbSet<CharacterClass> CharacterClass { get; init; }
     }
 }

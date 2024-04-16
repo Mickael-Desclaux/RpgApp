@@ -110,7 +110,7 @@ CREATE TABLE [Image] (
 )
 GO
 
-CREATE TABLE [Class] (
+CREATE TABLE [CharacterClass] (
   [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [Name] nvarchar(50),
   [ImageId] integer
@@ -329,7 +329,7 @@ CREATE TABLE [Map] (
 )
 GO
 
-ALTER TABLE [PlayerCharacter] ADD FOREIGN KEY ([ClassId]) REFERENCES [Class] ([Id])
+ALTER TABLE [PlayerCharacter] ADD FOREIGN KEY ([ClassId]) REFERENCES [CharacterClass] ([Id])
 GO
 
 ALTER TABLE [PlayerCharacter] ADD FOREIGN KEY ([RaceId]) REFERENCES [Race] ([Id])

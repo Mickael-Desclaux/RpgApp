@@ -15,7 +15,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Add Repositories
+#region Repositories
+
 builder.Services.AddScoped<IRepository<Spell>, Repository<Spell>>();
 builder.Services.AddScoped<IRepository<PlayerCharacter>, Repository<PlayerCharacter>>();
 builder.Services.AddScoped<IRepository<DiceType>, Repository<DiceType>>();
@@ -23,8 +24,12 @@ builder.Services.AddScoped<IRepository<PlayerStat>, Repository<PlayerStat>>();
 builder.Services.AddScoped<IRepository<NonPlayerCharacter>, Repository<NonPlayerCharacter>>();
 builder.Services.AddScoped<IRepository<Monster>, Repository<Monster>>();
 builder.Services.AddScoped<IRepository<Image>, Repository<Image>>();
+builder.Services.AddScoped<IRepository<CharacterClass>, Repository<CharacterClass>>();
 
-//Add Services
+#endregion
+
+#region Services
+
 builder.Services.AddTransient<ISpellService, SpellService>();
 builder.Services.AddTransient<IPlayerCharacterService, PlayerCharacterService>();
 builder.Services.AddTransient<IDiceTypeService, DiceTypeService>();
@@ -32,6 +37,9 @@ builder.Services.AddTransient<IPlayerStatService, PlayerStatService>();
 builder.Services.AddTransient<INonPlayerCharacterService, NonPlayerCharacterService>();
 builder.Services.AddTransient<IMonsterService, MonsterService>();
 builder.Services.AddTransient<IImageService, ImageService>();
+builder.Services.AddTransient<ICharacterClassService, CharacterClassService>();
+
+#endregion
 
 var app = builder.Build();
 
