@@ -28,6 +28,7 @@ builder.Services.AddScoped<IRepository<CharacterClass>, Repository<CharacterClas
 builder.Services.AddScoped<IRepository<ClassSkill>, Repository<ClassSkill>>();
 builder.Services.AddScoped<IRepository<Race>, Repository<Race>>();
 builder.Services.AddScoped<IRepository<RaceTrait>, Repository<RaceTrait>>();
+builder.Services.AddScoped<IRepository<Feat>, Repository<Feat>>();
 
 #endregion
 
@@ -44,6 +45,7 @@ builder.Services.AddTransient<ICharacterClassService, CharacterClassService>();
 builder.Services.AddTransient<IClassSkillService, ClassSkillService>();
 builder.Services.AddTransient<IRaceService, RaceService>();
 builder.Services.AddTransient<IRaceTraitService, RaceTraitService>();
+builder.Services.AddTransient<IFeatService, FeatService>();
 
 #endregion
 
