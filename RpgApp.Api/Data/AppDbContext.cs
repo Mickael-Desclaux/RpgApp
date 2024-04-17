@@ -20,5 +20,6 @@ namespace RpgApp.Api.Data
         public DbSet<Language> Language { get; init; }
         public DbSet<Background> Background { get; init; }
         public DbSet<Alignment> Alignment { get; init; }
+        public DbSet<BaseStat> BaseStat { get; init; }
     }
 }
