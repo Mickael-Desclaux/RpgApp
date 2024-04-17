@@ -28,5 +28,6 @@ namespace RpgApp.Api.Data
         public DbSet<MonsterPassiveSkill> MonsterPassiveSkill { get; init; }
         public DbSet<MonsterAction> MonsterAction { get; init; }
         public DbSet<Roleplay> Roleplay { get; init; }
+        public DbSet<Equipment> Equipment { get; init; }
     }
 }
