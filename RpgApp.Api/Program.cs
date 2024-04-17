@@ -33,6 +33,7 @@ builder.Services.AddScoped<IRepository<Language>, Repository<Language>>();
 builder.Services.AddScoped<IRepository<Background>, Repository<Background>>();
 builder.Services.AddScoped<IRepository<Alignment>, Repository<Alignment>>();
 builder.Services.AddScoped<IRepository<BaseStat>, Repository<BaseStat>>();
+builder.Services.AddScoped<IRepository<SavingStat>, Repository<SavingStat>>();
 
 #endregion
 
@@ -54,6 +55,7 @@ builder.Services.AddTransient<ILanguageService, LanguageService>();
 builder.Services.AddTransient<IBackgroundService, RpgApp.Api.Services.BackgroundService>();
 builder.Services.AddTransient<IAlignmentService, AlignmentService>();
 builder.Services.AddTransient<IBaseStatService, BaseStatService>();
+builder.Services.AddTransient<ISavingStatService, SavingStatService>();
 
 #endregion
 

@@ -21,5 +21,6 @@ namespace RpgApp.Api.Data
         public DbSet<Background> Background { get; init; }
         public DbSet<Alignment> Alignment { get; init; }
         public DbSet<BaseStat> BaseStat { get; init; }
+        public DbSet<SavingStat> SavingStat { get; init; }
     }
 }
