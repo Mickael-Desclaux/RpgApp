@@ -23,5 +23,6 @@ namespace RpgApp.Api.Data
         public DbSet<BaseStat> BaseStat { get; init; }
         public DbSet<SavingStat> SavingStat { get; init; }
         public DbSet<SkillStat> SkillStat { get; init; }
+        public DbSet<Resistance> Resistance { get; init; }
     }
 }

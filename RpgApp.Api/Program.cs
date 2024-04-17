@@ -35,6 +35,7 @@ builder.Services.AddScoped<IRepository<Alignment>, Repository<Alignment>>();
 builder.Services.AddScoped<IRepository<BaseStat>, Repository<BaseStat>>();
 builder.Services.AddScoped<IRepository<SavingStat>, Repository<SavingStat>>();
 builder.Services.AddScoped<IRepository<SkillStat>, Repository<SkillStat>>();
+builder.Services.AddScoped<IRepository<Resistance>, Repository<Resistance>>();
 
 #endregion
 
@@ -58,6 +59,7 @@ builder.Services.AddTransient<IAlignmentService, AlignmentService>();
 builder.Services.AddTransient<IBaseStatService, BaseStatService>();
 builder.Services.AddTransient<ISavingStatService, SavingStatService>();
 builder.Services.AddTransient<ISkillStatService, SkillStatService>();
+builder.Services.AddTransient<IResistanceService, ResistanceService>();
 
 #endregion
 

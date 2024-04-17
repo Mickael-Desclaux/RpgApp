@@ -8,3 +8,7 @@ VALUES ('Commun'), ('Elfe'), ('Géant'), ('Gnome'), ('Gobelin'), ('Halfelin'), (
 INSERT INTO [Alignment] (Morality, Attitude)
 VALUES ('Loyal', 'Bon'), ('Neutre', 'Bon'), ('Chaotique', 'Bon'), ('Loyal', 'Neutre'), ('Neutre', 'Neutre'), ('Chaotique', 'Neutre'),
        ('Loyal', 'Mauvais'), ('Neutre', 'Mauvais'), ('Chaotique', 'Mauvais');
+
+INSERT INTO [Resistance] (Name)
+VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
+       ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');
