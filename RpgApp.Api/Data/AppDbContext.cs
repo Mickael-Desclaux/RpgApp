@@ -19,5 +19,6 @@ namespace RpgApp.Api.Data
         public DbSet<Feat> Feat { get; init; }
         public DbSet<Language> Language { get; init; }
         public DbSet<Background> Background { get; init; }
+        public DbSet<Alignment> Alignment { get; init; }
     }
 }
