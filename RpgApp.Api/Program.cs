@@ -30,6 +30,7 @@ builder.Services.AddScoped<IRepository<Race>, Repository<Race>>();
 builder.Services.AddScoped<IRepository<RaceTrait>, Repository<RaceTrait>>();
 builder.Services.AddScoped<IRepository<Feat>, Repository<Feat>>();
 builder.Services.AddScoped<IRepository<Language>, Repository<Language>>();
+builder.Services.AddScoped<IRepository<Background>, Repository<Background>>();
 
 #endregion
 
@@ -48,6 +49,7 @@ builder.Services.AddTransient<IRaceService, RaceService>();
 builder.Services.AddTransient<IRaceTraitService, RaceTraitService>();
 builder.Services.AddTransient<IFeatService, FeatService>();
 builder.Services.AddTransient<ILanguageService, LanguageService>();
+builder.Services.AddTransient<IBackgroundService, RpgApp.Api.Services.BackgroundService>();
 
 #endregion
 
