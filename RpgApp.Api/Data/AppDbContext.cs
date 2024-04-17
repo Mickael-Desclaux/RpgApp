@@ -25,5 +25,6 @@ namespace RpgApp.Api.Data
         public DbSet<SkillStat> SkillStat { get; init; }
         public DbSet<Resistance> Resistance { get; init; }
         public DbSet<Immunity> Immunity { get; init; }
+        public DbSet<MonsterPassiveSkill> MonsterPassiveSkill { get; init; }
     }
 }
