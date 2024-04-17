@@ -39,6 +39,7 @@ builder.Services.AddScoped<IRepository<Resistance>, Repository<Resistance>>();
 builder.Services.AddScoped<IRepository<Immunity>, Repository<Immunity>>();
 builder.Services.AddScoped<IRepository<MonsterPassiveSkill>, Repository<MonsterPassiveSkill>>();
 builder.Services.AddScoped<IRepository<MonsterAction>, Repository<MonsterAction>>();
+builder.Services.AddScoped<IRepository<Roleplay>, Repository<Roleplay>>();
 
 #endregion
 
@@ -66,6 +67,7 @@ builder.Services.AddTransient<IResistanceService, ResistanceService>();
 builder.Services.AddTransient<IImmunityService, ImmunityService>();
 builder.Services.AddTransient<IMonsterPassiveSkillService, MonsterPassiveSkillService>();
 builder.Services.AddTransient<IMonsterActionService, MonsterActionService>();
+builder.Services.AddTransient<IRoleplayService, RoleplayService>();
 
 #endregion
 
