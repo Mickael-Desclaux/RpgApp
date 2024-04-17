@@ -12,3 +12,7 @@ VALUES ('Loyal', 'Bon'), ('Neutre', 'Bon'), ('Chaotique', 'Bon'), ('Loyal', 'Neu
 INSERT INTO [Resistance] (Name)
 VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
        ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');
+
+INSERT INTO [Immunity] (Name)
+VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
+       ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');

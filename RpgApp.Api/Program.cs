@@ -36,6 +36,7 @@ builder.Services.AddScoped<IRepository<BaseStat>, Repository<BaseStat>>();
 builder.Services.AddScoped<IRepository<SavingStat>, Repository<SavingStat>>();
 builder.Services.AddScoped<IRepository<SkillStat>, Repository<SkillStat>>();
 builder.Services.AddScoped<IRepository<Resistance>, Repository<Resistance>>();
+builder.Services.AddScoped<IRepository<Immunity>, Repository<Immunity>>();
 
 #endregion
 
@@ -60,6 +61,7 @@ builder.Services.AddTransient<IBaseStatService, BaseStatService>();
 builder.Services.AddTransient<ISavingStatService, SavingStatService>();
 builder.Services.AddTransient<ISkillStatService, SkillStatService>();
 builder.Services.AddTransient<IResistanceService, ResistanceService>();
+builder.Services.AddTransient<IImmunityService, ImmunityService>();
 
 #endregion
 
