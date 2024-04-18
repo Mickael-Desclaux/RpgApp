@@ -31,7 +31,8 @@ namespace RpgApp.Api.Data
         public DbSet<Equipment> Equipment { get; init; }
         public DbSet<EquipmentType> EquipmentType { get; init; }
         public DbSet<CharacterDescription> CharacterDescription { get; init; }
-        public DbSet<GameMasterNote> gameMasterNote { get; init; }
+        public DbSet<GameMasterNote> GameMasterNote { get; init; }
         public DbSet<Chapter> Chapter { get; init; }
+        public DbSet<Map> Map { get; init; }
     }
 }

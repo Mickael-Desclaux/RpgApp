@@ -45,6 +45,7 @@ builder.Services.AddScoped<IRepository<EquipmentType>, Repository<EquipmentType>
 builder.Services.AddScoped<IRepository<CharacterDescription>, Repository<CharacterDescription>>();
 builder.Services.AddScoped<IRepository<GameMasterNote>, Repository<GameMasterNote>>();
 builder.Services.AddScoped<IRepository<Chapter>, Repository<Chapter>>();
+builder.Services.AddScoped<IRepository<Map>, Repository<Map>>();
 
 #endregion
 
@@ -78,6 +79,7 @@ builder.Services.AddTransient<IEquipmentTypeService, EquipmentTypeService>();
 builder.Services.AddTransient<ICharacterDescriptionService, CharacterDescriptionService>();
 builder.Services.AddTransient<IGameMasterNoteService, GameMasterNoteService>();
 builder.Services.AddTransient<IChapterService, ChapterService>();
+builder.Services.AddTransient<IMapService, MapService>();
 
 #endregion
 
