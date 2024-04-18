@@ -42,6 +42,7 @@ builder.Services.AddScoped<IRepository<MonsterAction>, Repository<MonsterAction>
 builder.Services.AddScoped<IRepository<Roleplay>, Repository<Roleplay>>();
 builder.Services.AddScoped<IRepository<Equipment>, Repository<Equipment>>();
 builder.Services.AddScoped<IRepository<EquipmentType>, Repository<EquipmentType>>();
+builder.Services.AddScoped<IRepository<CharacterDescription>, Repository<CharacterDescription>>();
 
 #endregion
 
@@ -72,6 +73,7 @@ builder.Services.AddTransient<IMonsterActionService, MonsterActionService>();
 builder.Services.AddTransient<IRoleplayService, RoleplayService>();
 builder.Services.AddTransient<IEquipmentService, EquipmentService>();
 builder.Services.AddTransient<IEquipmentTypeService, EquipmentTypeService>();
+builder.Services.AddTransient<ICharacterDescriptionService, CharacterDescriptionService>();
 
 #endregion
 
