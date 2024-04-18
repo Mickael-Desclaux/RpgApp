@@ -29,5 +29,6 @@ namespace RpgApp.Api.Data
         public DbSet<MonsterAction> MonsterAction { get; init; }
         public DbSet<Roleplay> Roleplay { get; init; }
         public DbSet<Equipment> Equipment { get; init; }
+        public DbSet<EquipmentType> EquipmentType { get; init; }
     }
 }

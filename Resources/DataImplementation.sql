@@ -16,3 +16,7 @@ VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('N
 INSERT INTO [Immunity] (Name)
 VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
        ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');
+
+INSERT INTO [EquipmentType] (Name)
+VALUES ('Armure légère'), ('Armure moyenne'), ('Armure lourde'), ('Bouclier'), ('Arme de corps à corps'), ('Arme à distance'),
+       ('Arme magique'), ('Consommable'), ('Arme de jet'), ('Outils'), ('Instrument de musique'), ('Vêtements'), ('Autre')
