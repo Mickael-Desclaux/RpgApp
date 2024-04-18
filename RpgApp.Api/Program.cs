@@ -43,6 +43,7 @@ builder.Services.AddScoped<IRepository<Roleplay>, Repository<Roleplay>>();
 builder.Services.AddScoped<IRepository<Equipment>, Repository<Equipment>>();
 builder.Services.AddScoped<IRepository<EquipmentType>, Repository<EquipmentType>>();
 builder.Services.AddScoped<IRepository<CharacterDescription>, Repository<CharacterDescription>>();
+builder.Services.AddScoped<IRepository<GameMasterNote>, Repository<GameMasterNote>>();
 
 #endregion
 
@@ -74,6 +75,7 @@ builder.Services.AddTransient<IRoleplayService, RoleplayService>();
 builder.Services.AddTransient<IEquipmentService, EquipmentService>();
 builder.Services.AddTransient<IEquipmentTypeService, EquipmentTypeService>();
 builder.Services.AddTransient<ICharacterDescriptionService, CharacterDescriptionService>();
+builder.Services.AddTransient<IGameMasterNoteService, GameMasterNoteService>();
 
 #endregion
 
