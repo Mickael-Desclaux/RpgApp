@@ -7,6 +7,7 @@ CREATE TABLE [PlayerCharacter] (
   [PlayerCharacterSpellId] integer,
   [PlayerCharacterEquipmentId] integer,
   [PlayerCharacterFeatId] integer,
+  [DamageResistanceId] integer,
   [BackgroundId] integer,
   [AlignmentId] integer,
   [RoleplayId] integer,
@@ -44,6 +45,7 @@ GO
 CREATE TABLE [NonPlayerCharacter] (
   [Id] integer IDENTITY(1,1) PRIMARY KEY,
   [ChapterId] integer,
+  [DamageResistanceId] integer,
   [Name] nvarchar(50),
   [ImageId] integer,
   [CharacterDescription] nvarchar(max),
@@ -60,6 +62,7 @@ CREATE TABLE [Monster] (
   [SkillStatId] integer,
   [PassiveSkillId] integer,
   [MonsterActionId] integer,
+  [DamageResistanceId] integer,
   [Name] nvarchar(50),
   [MaxHp] integer,
   [CurrentHp] integer,
@@ -68,20 +71,6 @@ CREATE TABLE [Monster] (
   [Note] nvarchar(max)
 )
 GO
-
--- CREATE TABLE [MonsterResistance] (
---   [Id] integer IDENTITY(1,1) PRIMARY KEY,
---   [MonsterId] integer,
---   [ResistanceId] integer
--- )
--- GO
-
--- CREATE TABLE [MonsterImmunity] (
---   [Id] integer IDENTITY(1,1) PRIMARY KEY,
---   [MonsterId] integer,
---   [ImmunityId] integer
--- )
--- GO
 
 CREATE TABLE [MonsterLanguage] (
   [Id] integer IDENTITY(1,1) PRIMARY KEY,
@@ -224,13 +213,6 @@ CREATE TABLE [SkillStat] (
 )
 GO
 
--- CREATE TABLE [PlayerCharacterResistance] (
---   [Id] integer IDENTITY(1,1) PRIMARY KEY,
---   [PlayerId] integer,
---   [ResistanceId] integer
--- )
--- GO
-
 CREATE TABLE [DamageType] (
     [Id] integer IDENTITY(1,1) PRIMARY KEY,
     [Name] nvarchar(50)
@@ -243,37 +225,11 @@ CREATE TABLE [ResistanceType] (
 )
 GO
 
-CREATE TABLE [CharacterResistance] (
+CREATE TABLE [DamageResistance] (
     [Id] integer IDENTITY(1,1) PRIMARY KEY,
-    [DamageTypeId] integer,
     [ResistanceTypeId] integer,
-    [PlayerCharacterId] integer,
-    [NonPlayerCharacterId] integer,
-    [MonsterId] integer,
-    FOREIGN KEY ([PlayerCharacterId]) REFERENCES [PlayerCharacter]([Id]),
-    FOREIGN KEY ([NonPlayerCharacterId]) REFERENCES [NonPlayerCharacter]([Id]),
-    FOREIGN KEY ([MonsterId]) REFERENCES [Monster]([Id])
+    [DamageTypeId] integer
 )
-GO
-
--- CREATE TABLE [Resistance] (
---   [Id] integer IDENTITY(1,1) PRIMARY KEY,
---   [Name] nvarchar(50)
--- )
--- GO
---
--- CREATE TABLE [PlayerCharacterImmunity] (
---   [Id] integer IDENTITY(1,1) PRIMARY KEY,
---   [PlayerId] integer,
---   [ImmunityId] integer
--- )
--- GO
---
--- CREATE TABLE [Immunity] (
---   [Id] integer IDENTITY(1,1) PRIMARY KEY,
---   [Name] nvarchar(50)
--- )
--- GO
 
 CREATE TABLE [MonsterPassiveSkill] (
   [Id] integer IDENTITY(1,1) PRIMARY KEY,
@@ -354,6 +310,15 @@ CREATE TABLE [Map] (
 )
 GO
 
+ALTER TABLE [PlayerCharacter] ADD FOREIGN KEY ([DamageResistanceId]) REFERENCES [DamageResistance] ([Id])
+GO
+
+ALTER TABLE [NonPlayerCharacter] ADD FOREIGN KEY ([DamageResistanceId]) REFERENCES [DamageResistance] ([Id])
+GO
+
+ALTER TABLE [Monster] ADD FOREIGN KEY ([DamageResistanceId]) REFERENCES [DamageResistance] ([Id])
+GO
+
 ALTER TABLE [PlayerCharacter] ADD FOREIGN KEY ([ClassId]) REFERENCES [CharacterClass] ([Id])
 GO
 
@@ -372,23 +337,11 @@ GO
 ALTER TABLE [PlayerCharacter] ADD FOREIGN KEY ([RoleplayId]) REFERENCES [Roleplay] ([Id])
 GO
 
--- ALTER TABLE [PlayerCharacterResistance] ADD FOREIGN KEY ([PlayerId]) REFERENCES [PlayerCharacter] ([Id])
--- GO
-
 ALTER TABLE [PlayerCharacterSpell] ADD FOREIGN KEY ([SpellId]) REFERENCES [Spell] ([Id])
 GO
 
--- ALTER TABLE [PlayerCharacterResistance] ADD FOREIGN KEY ([ResistanceId]) REFERENCES [Resistance] ([Id])
--- GO
-
 ALTER TABLE [PlayerCharacterFeat] ADD FOREIGN KEY ([FeatId]) REFERENCES [Feat] ([Id])
 GO
-
--- ALTER TABLE [PlayerCharacterImmunity] ADD FOREIGN KEY ([PlayerId]) REFERENCES [PlayerCharacter] ([Id])
--- GO
---
--- ALTER TABLE [PlayerCharacterImmunity] ADD FOREIGN KEY ([ImmunityId]) REFERENCES [Immunity] ([Id])
--- GO
 
 ALTER TABLE [PlayerCharacterEquipment] ADD FOREIGN KEY ([EquipmentId]) REFERENCES [Equipment] ([Id])
 GO
@@ -441,23 +394,11 @@ GO
 ALTER TABLE [Monster] ADD FOREIGN KEY ([BaseStatId]) REFERENCES [BaseStat] ([Id])
 GO
 
--- ALTER TABLE [MonsterImmunity] ADD FOREIGN KEY ([MonsterId]) REFERENCES [Monster] ([Id])
--- GO
---
--- ALTER TABLE [MonsterResistance] ADD FOREIGN KEY ([MonsterId]) REFERENCES [Monster] ([Id])
--- GO
-
 ALTER TABLE [MonsterLanguage] ADD FOREIGN KEY ([MonsterId]) REFERENCES [Monster] ([Id])
 GO
 
 ALTER TABLE [MonsterLanguage] ADD FOREIGN KEY ([LanguageId]) REFERENCES [Language] ([Id])
 GO
-
--- ALTER TABLE [MonsterImmunity] ADD FOREIGN KEY ([ImmunityId]) REFERENCES [Immunity] ([Id])
--- GO
---
--- ALTER TABLE [MonsterResistance] ADD FOREIGN KEY ([ResistanceId]) REFERENCES [Resistance] ([Id])
--- GO
 
 ALTER TABLE [Equipment] ADD FOREIGN KEY ([TypeId]) REFERENCES [EquipmentType] ([Id])
 GO

@@ -10,6 +10,7 @@
         public int PlayerCharacterSpellId { get; set; }
         public int PlayerCharacterEquipmentId { get; set; }
         public int PlayerCharacterFeatId { get; set; }
+        public int DamageResistanceId { get; set; }
         public int BackgroundId { get; set; }
         public int AlignmentId { get; set; }
         public int RolePlayId { get; set; }

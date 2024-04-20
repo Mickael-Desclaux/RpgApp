@@ -10,6 +10,7 @@
         public int SkillStatId { get; set; }
         public int PassiveSkillId { get; set; }
         public int MonsterActionId { get; set; }
+        public int DamageResistanceId { get; set; }
         public string Name { get; set; }
         public int MaxHp { get; set; }
         public int CurrentHp { get; set; }
