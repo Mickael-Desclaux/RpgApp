@@ -49,6 +49,7 @@ builder.Services.AddScoped<IRepository<ResistanceType>, Repository<ResistanceTyp
 builder.Services.AddScoped<IRepository<CharacterResistance>, Repository<CharacterResistance>>();
 builder.Services.AddScoped<IRepository<PlayerCharacterSpell>, Repository<PlayerCharacterSpell>>();
 builder.Services.AddScoped<IRepository<PlayerCharacterFeat>, Repository<PlayerCharacterFeat>>();
+builder.Services.AddScoped<IRepository<PlayerCharacterLanguage>, Repository<PlayerCharacterLanguage>>();
 
 #endregion
 
@@ -86,6 +87,7 @@ builder.Services.AddTransient<IResistanceTypeService, ResistanceTypeService>();
 builder.Services.AddTransient<ICharacterResistanceService, CharacterResistanceService>();
 builder.Services.AddTransient<IPlayerCharacterSpellService, PlayerCharacterSpellService>();
 builder.Services.AddTransient<IPlayerCharacterFeatService, PlayerCharacterFeatService>();
+builder.Services.AddTransient<IPlayerCharacterLanguageService, PlayerCharacterLanguageService>();
 
 #endregion
 
