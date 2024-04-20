@@ -47,6 +47,7 @@ builder.Services.AddScoped<IRepository<Map>, Repository<Map>>();
 builder.Services.AddScoped<IRepository<DamageType>, Repository<DamageType>>();
 builder.Services.AddScoped<IRepository<ResistanceType>, Repository<ResistanceType>>();
 builder.Services.AddScoped<IRepository<CharacterResistance>, Repository<CharacterResistance>>();
+builder.Services.AddScoped<IRepository<PlayerCharacterSpell>, Repository<PlayerCharacterSpell>>();
 
 #endregion
 
@@ -82,6 +83,7 @@ builder.Services.AddTransient<IMapService, MapService>();
 builder.Services.AddTransient<IDamageTypeService, DamageTypeService>();
 builder.Services.AddTransient<IResistanceTypeService, ResistanceTypeService>();
 builder.Services.AddTransient<ICharacterResistanceService, CharacterResistanceService>();
+builder.Services.AddTransient<IPlayerCharacterSpellService, PlayerCharacterSpellService>();
 
 #endregion
 

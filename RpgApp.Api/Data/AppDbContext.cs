@@ -35,5 +35,6 @@ namespace RpgApp.Api.Data
         public DbSet<DamageType> DamageType { get; init; }
         public DbSet<ResistanceType> ResistanceType { get; init; }
         public DbSet<CharacterResistance> CharacterResistance { get; init; }
+        public DbSet<PlayerCharacterSpell> PlayerCharacterSpell { get; init; }
     }
 }
