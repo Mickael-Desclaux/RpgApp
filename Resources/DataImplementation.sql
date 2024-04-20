@@ -9,13 +9,16 @@ INSERT INTO [Alignment] (Morality, Attitude)
 VALUES ('Loyal', 'Bon'), ('Neutre', 'Bon'), ('Chaotique', 'Bon'), ('Loyal', 'Neutre'), ('Neutre', 'Neutre'), ('Chaotique', 'Neutre'),
        ('Loyal', 'Mauvais'), ('Neutre', 'Mauvais'), ('Chaotique', 'Mauvais');
 
-INSERT INTO [Resistance] (Name)
+INSERT INTO [DamageType] (Name)
 VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
        ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');
 
-INSERT INTO [Immunity] (Name)
-VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
-       ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');
+INSERT INTO [ResistanceType] (Name)
+VALUES ('Résistance'), ('Immunité'), ('Vulnérabilité');
+
+-- INSERT INTO [Immunity] (Name)
+-- VALUES ('Acide'), ('Contandant'), ('Feu'), ('Force'), ('Foudre'), ('Froid'), ('Nécrotique'), ('Perforant'), ('Poison'),
+--        ('Psychique'), ('Radiant'), ('Tonerre'), ('Tranchant');
 
 INSERT INTO [EquipmentType] (Name)
 VALUES ('Armure légère'), ('Armure moyenne'), ('Armure lourde'), ('Bouclier'), ('Arme de corps à corps'), ('Arme à distance'),
