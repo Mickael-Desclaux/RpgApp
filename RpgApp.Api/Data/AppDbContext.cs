@@ -32,5 +32,6 @@ namespace RpgApp.Api.Data
         public DbSet<GameMasterNote> GameMasterNote { get; init; }
         public DbSet<Chapter> Chapter { get; init; }
         public DbSet<Map> Map { get; init; }
+        public DbSet<DamageType> DamageType { get; init; }
     }
 }

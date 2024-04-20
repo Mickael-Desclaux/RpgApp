@@ -44,6 +44,7 @@ builder.Services.AddScoped<IRepository<CharacterDescription>, Repository<Charact
 builder.Services.AddScoped<IRepository<GameMasterNote>, Repository<GameMasterNote>>();
 builder.Services.AddScoped<IRepository<Chapter>, Repository<Chapter>>();
 builder.Services.AddScoped<IRepository<Map>, Repository<Map>>();
+builder.Services.AddScoped<IRepository<DamageType>, Repository<DamageType>>();
 
 #endregion
 
@@ -76,6 +77,7 @@ builder.Services.AddTransient<ICharacterDescriptionService, CharacterDescription
 builder.Services.AddTransient<IGameMasterNoteService, GameMasterNoteService>();
 builder.Services.AddTransient<IChapterService, ChapterService>();
 builder.Services.AddTransient<IMapService, MapService>();
+builder.Services.AddTransient<IDamageTypeService, DamageTypeService>();
 
 #endregion
 
