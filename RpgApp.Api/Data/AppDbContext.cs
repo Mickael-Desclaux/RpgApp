@@ -38,5 +38,6 @@ namespace RpgApp.Api.Data
         public DbSet<PlayerCharacterSpell> PlayerCharacterSpell { get; init; }
         public DbSet<PlayerCharacterFeat> PlayerCharacterFeat { get; init; }
         public DbSet<PlayerCharacterLanguage> PlayerCharacterLanguage { get; init; }
+        public DbSet<PlayerCharacterEquipment> PlayerCharacterEquipment { get; init; }
     }
 }
