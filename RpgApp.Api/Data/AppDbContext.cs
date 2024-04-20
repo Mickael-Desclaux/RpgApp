@@ -34,5 +34,6 @@ namespace RpgApp.Api.Data
         public DbSet<Map> Map { get; init; }
         public DbSet<DamageType> DamageType { get; init; }
         public DbSet<ResistanceType> ResistanceType { get; init; }
+        public DbSet<CharacterResistance> CharacterResistance { get; init; }
     }
 }
