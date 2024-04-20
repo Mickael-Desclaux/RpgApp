@@ -33,5 +33,6 @@ namespace RpgApp.Api.Data
         public DbSet<Chapter> Chapter { get; init; }
         public DbSet<Map> Map { get; init; }
         public DbSet<DamageType> DamageType { get; init; }
+        public DbSet<ResistanceType> ResistanceType { get; init; }
     }
 }
