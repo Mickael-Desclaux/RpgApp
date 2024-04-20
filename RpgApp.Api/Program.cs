@@ -51,6 +51,7 @@ builder.Services.AddScoped<IRepository<PlayerCharacterSpell>, Repository<PlayerC
 builder.Services.AddScoped<IRepository<PlayerCharacterFeat>, Repository<PlayerCharacterFeat>>();
 builder.Services.AddScoped<IRepository<PlayerCharacterLanguage>, Repository<PlayerCharacterLanguage>>();
 builder.Services.AddScoped<IRepository<PlayerCharacterEquipment>, Repository<PlayerCharacterEquipment>>();
+builder.Services.AddScoped<IRepository<MonsterLanguage>, Repository<MonsterLanguage>>();
 
 #endregion
 
@@ -90,6 +91,7 @@ builder.Services.AddTransient<IPlayerCharacterSpellService, PlayerCharacterSpell
 builder.Services.AddTransient<IPlayerCharacterFeatService, PlayerCharacterFeatService>();
 builder.Services.AddTransient<IPlayerCharacterLanguageService, PlayerCharacterLanguageService>();
 builder.Services.AddTransient<IPlayerCharacterEquipmentService, PlayerCharacterEquipmentService>();
+builder.Services.AddTransient<IMonsterLanguageService, MonsterLanguageService>();
 
 #endregion
 
