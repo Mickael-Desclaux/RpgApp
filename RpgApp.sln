@@ -8,7 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgApp.Api", "RpgApp.Api\RpgApp.Api.csproj", "{50378B9A-D134-4EE8-86B5-93D636E1C642}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgApp.Api", "RpgApp.Api\RpgApp.Api.csproj", "{50378B9A-D134-4EE8-86B5-93D636E1C642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgApp.GameMasterApp", "RpgApp.GameMasterApp\RpgApp.GameMasterApp.csproj", "{516746CB-2093-4FF8-B99F-D1C0D546C306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{50378B9A-D134-4EE8-86B5-93D636E1C642}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50378B9A-D134-4EE8-86B5-93D636E1C642}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50378B9A-D134-4EE8-86B5-93D636E1C642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516746CB-2093-4FF8-B99F-D1C0D546C306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516746CB-2093-4FF8-B99F-D1C0D546C306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516746CB-2093-4FF8-B99F-D1C0D546C306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516746CB-2093-4FF8-B99F-D1C0D546C306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

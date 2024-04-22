@@ -1,13 +1,7 @@
-﻿using System.Text;
+﻿using RpgApp.GameMasterApp.Services;
+using RpgApp.GameMasterApp.Views;
+using System.Net.Http;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace RpgApp.GameMasterApp
 {
@@ -16,9 +10,15 @@ namespace RpgApp.GameMasterApp
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new ImagesPage());
         }
     }
 }
